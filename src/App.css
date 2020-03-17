@@ -62,11 +62,11 @@
 @media (orientation: landscape) {
   .news-item .logo {
     position: absolute;
-    height: 8%;
-    width: 15%;
-    bottom: 18.5%;
+    height: 50%;
+    width: 30%;
+    bottom: 50.5%;
     left: 0;
-    padding: 5% 0 5%;
+    padding: 5% 3% 5%;
     background-color: snow;
     opacity: 1;
     -webkit-animation: slideInLeft 1s ease-in;
@@ -116,9 +116,8 @@
 @media (orientation: landscape) {
   .news-item .logo img {
     height: 65%;
-    width: 100%;
+    width: 80%;
     object-fit: scale-down;
-    padding: 3% 4%;
   }
 }
 
@@ -143,10 +142,10 @@
   .news-item .title {
     position: fixed;
     font-size: 3vw;
-    bottom: 18.5%;
-    height: 8%;
-    width: 66%;
-    left: 15%;
+    bottom: 0%;
+    height: 50.5%;
+    width: 30%;
+    left: 0;
     background-color: brown;
     opacity: 1;
     padding: 1% 3% 5% 3%;
@@ -156,7 +155,7 @@
     animation: slideInLeft 1s ease-in;
     display: flex;
     justify-content: center;
-    /* align-items: center; */
+    vertical-align: middle;
   }
 }
 
@@ -165,8 +164,8 @@
     position: fixed;
     font-size: 2.5em;
     bottom: 0;
-    left: 0;
-    width: 92%;
+    left: 50%;
+    width: 50%;
     height: 18.5%;
     background-color: black;
     opacity: 1;
@@ -192,14 +191,14 @@
   }
 }
 
-@media (orientarion: portrait) {
+@media (orientation: landscape) {
   .descNoQrCode {
     position: fixed;
     font-size: 2.6em;
     bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 18%;
+    left: 30%;
+    width: 50%;
+    height: 100%;
     background-color: black;
     opacity: 1;
     padding: 1% 3%;
@@ -208,7 +207,7 @@
   }
 }
 
-@media (orientarion: landscape) {
+@media (orientation: portrait) {
   .descNoQrCode {
     position: fixed;
     font-size: 2.6em;
