@@ -29,5 +29,5 @@ var dsplay_media = {
 };
 
 var dsplay_template = {
-  hasQrCode: false
+  // hasQrCode: 'true'
 };

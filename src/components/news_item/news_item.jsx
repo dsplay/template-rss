@@ -7,16 +7,12 @@ import { Textfit } from 'react-textfit';
 
 export default function NewsItem() {
   let textFitComQrCode = (
-    <div className='desc'>
-      <Textfit mode='multi'>{media.itemDescription}</Textfit>
-    </div>
+    <Textfit className='desc' mode='multi'>{media.itemDescription}</Textfit>
   );
   let textFitSemQrCode = (
-    <div className='descNoQrCode'>
-      <Textfit mode='multi' min={30}>
-        {media.itemDescription}
-      </Textfit>
-    </div>
+    <Textfit className='descNoQrCode' mode='multi'>
+      {media.itemDescription}
+    </Textfit>
   );
 
   return (
