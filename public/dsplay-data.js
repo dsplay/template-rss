@@ -19,8 +19,7 @@ var dsplay_media = {
   hasImage: true,
   qrCode: '../test-assets/qrcode.png',
   itemContent: 'Conteúdo da notícia',
-  itemDescription:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum venenatis mauris, et maximus nunc.', // RSS item description
+  itemDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', // RSS item description
   itemContent: 'Content', // RSS item content
   itemTitle: 'Item Title', // RSS item title
   imageTitle: 'Image Title', // Title of RSS item image (if available)
@@ -30,5 +29,5 @@ var dsplay_media = {
 };
 
 var dsplay_template = {
-  hasQrCode: true
+  hasQrCode: false
 };
