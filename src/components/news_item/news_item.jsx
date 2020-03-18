@@ -7,7 +7,9 @@ import { Textfit } from 'react-textfit';
 
 export default function NewsItem() {
   let textFitComQrCode = (
-    <Textfit className='desc' mode='multi'>{media.itemDescription}</Textfit>
+    <Textfit className='desc' mode='multi'>
+      {media.itemDescription}
+    </Textfit>
   );
   let textFitSemQrCode = (
     <Textfit className='descNoQrCode' mode='multi'>
