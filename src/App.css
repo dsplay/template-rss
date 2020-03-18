@@ -61,12 +61,27 @@
 
 @media (orientation: landscape) {
   .news-item .logo {
-    position: fixed;
-    height: 14.3%;
+    position: absolute;
+    height: 8%;
     width: 15%;
     bottom: 18.5%;
     left: 0;
-    padding: 1% 0 5% 1.5%;
+    padding: 1% 0 5%;
+    background-color: snow;
+    opacity: 0.8;
+    -webkit-animation: slideInLeft 1s ease-in;
+    animation: slideInLeft 1s ease-in;
+  }
+}
+
+@media (orientation: portrait) {
+  .news-item .logo {
+    position: absolute;
+    height: 8%;
+    width: 15%;
+    bottom: 18.5%;
+    left: 0;
+    padding: 1% 0 5%;
     background-color: snow;
     opacity: 1;
     -webkit-animation: slideInLeft 1s ease-in;
@@ -101,7 +116,7 @@
 @media (orientation: landscape) {
   .news-item .logo img {
     height: 65%;
-    width: 80%;
+    width: 100%;
     object-fit: scale-down;
   }
 }
@@ -116,7 +131,7 @@
     width: 75%;
     background-color: brown;
     opacity: 1;
-    padding: 1% 5%;
+    padding: 1% 3%;
     -webkit-animation: slideInLeft 1s ease-in;
     animation: slideInLeft 1s ease-in;
     text-align: center;
@@ -126,52 +141,35 @@
 @media (orientation: landscape) {
   .news-item .title {
     position: fixed;
-    font-size: 6em;
+    font-size: 3vw;
     bottom: 18.5%;
-    height: 10.7%;
-    width: 0%;
+    height: 8%;
+    width: 30%;
     left: 15%;
     background-color: brown;
     opacity: 0.8;
-    padding: 1% 3% 7% 34%;
+    padding: 1% 3% 5% 3%;
+    padding-bottom: 5%;
     text-align: center;
     -webkit-animation: slideInLeft 1s ease-in;
     animation: slideInLeft 1s ease-in;
     display: flex;
-  }
-}
-
-@media (max-width: 721px) and (orientation: landscape) {
-  .news-item .title {
-    position: fixed;
-    font-size: 6em;
-    bottom: 18.5%;
-    height: 10.7%;
-    width: 100%;
-    left: 15%;
-    background-color: brown;
-    opacity: 1;
-    padding: 1% 3% 7% 34%;
-    /* padding-bottom: 5%; */
-    text-align: center;
-    -webkit-animation: slideInLeft 1s ease-in;
-    animation: slideInLeft 1s ease-in;
-    display: flex;
-    /* justify-content: center; */
+    justify-content: center;
     /* align-items: center; */
   }
 }
 
 @media (orientation: landscape) {
   .news-item .desc {
+    position: fixed;
     display: flex;
-
-    position: absolute;
-    font-size: 3em;
-    bottom: 18.5%;
-    height: 8%;
-    left: 15%;
-    background-color: brown;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    width: 92%;
+    height: 18.5%;
+    background-color: black;
     opacity: 0.8;
     padding: 1% 3%;
     -webkit-animation: slideInBottom 1s ease-out;
@@ -194,49 +192,34 @@
   }
 }
 
-@media (orientation: landscape) {
-  .descNoQrCode {
-    position: fixed;
-    font-size: 2.6em;
-    bottom: 0;
-    left: 30%;
-    width: 50%;
-    height: 100%;
-    background-color: black;
-    opacity: 1;
-    padding: 1% 3%;
-    -webkit-animation: slideInBottom 1s ease-out;
-    animation: slideInBottom 1s ease-out;
-  }
-}
-
 @media (orientation: portrait) {
   .descNoQrCode {
     position: fixed;
-    font-size: 2.6em;
     bottom: 0;
     left: 0;
-    width: 50%;
+    width: 100%;
     height: 18%;
     background-color: black;
-    opacity: 1;
+    opacity: 0.8;
     padding: 1% 3%;
     -webkit-animation: slideInBottom 1s ease-out;
     animation: slideInBottom 1s ease-out;
   }
 }
 
-.descNoQrCode {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 18%;
-  background-color: black;
-  opacity: 1;
-  padding: 1% 3%;
-  -webkit-animation: slideInBottom 1s ease-out;
-  animation: slideInBottom 1s ease-out;
+@media (orientation: landscape) {
+  .descNoQrCode {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 18.5%;
+    background-color: black;
+    opacity: 0.8;
+    padding: 1% 3%;
+    -webkit-animation: slideInBottom 1s ease-out;
+    animation: slideInBottom 1s ease-out;
+  }
 }
 
 .loading {
@@ -280,6 +263,10 @@
   border-color: white;
   border-style: solid;
   border-width: 6px;
+}
+
+.text-fit {
+  width: 100%;
 }
 
 #overlay {
