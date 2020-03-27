@@ -4,7 +4,7 @@ import QrCode from '../my_qrcode/my_qrcode.component';
 import MyImage from '../my_image/my_image.component';
 import { media, template } from '@dsplay/template-utils';
 import { Textfit } from 'react-textfit';
-import { screenFormat, BANNER_H } from '../../util/screen.js';
+import { screenFormat, BANNER_H, SQUARED } from '../../util/screen.js';
 
 export default function NewsItem() {
   if (screenFormat !== BANNER_H) {
@@ -13,19 +13,45 @@ export default function NewsItem() {
         {media.itemDescription}
       </Textfit>
     );
+
     let textFitSemQrCode = (
       <Textfit className='descNoQrCode' mode='multi'>
         {media.itemDescription}
       </Textfit>
     );
+
+    let textFitSemQrCodeSQ = (
+      <Textfit className='descNoQrCodeSQ' mode='multi'>
+        {media.itemDescription}
+      </Textfit>
+    );
+
+    let title = <div className='title'>{media.itemTitle}</div>;
+    let titleSQ = <div className='titleSQ'>{media.itemTitle}</div>;
+
+    let logomarca = (
+      <div className='logo'>
+        <img src={logo} alt='Logo' />
+      </div>
+    );
+
+    let logomarcaSQ = (
+      <div className='logoSQ'>
+        <img src={logo} alt='Logo' />
+      </div>
+    );
+
+    if (screenFormat === SQUARED) {
+      textFitSemQrCode = textFitSemQrCodeSQ;
+      title = titleSQ;
+      logomarca = logomarcaSQ;
+    }
     return (
       <div className='news-item'>
         <MyImage />
-        <div className='logo'>
-          <img src={logo} alt='Logo' />
-        </div>
-        <div className='title'>{media.itemTitle}</div>
 
+        {title}
+        {logomarca}
         {template.hasQrCode ? textFitComQrCode : textFitSemQrCode}
         {template.hasQrCode ? <div className='qrcode'>{<QrCode />}</div> : ''}
       </div>
@@ -43,7 +69,15 @@ export default function NewsItem() {
     );
     return (
       <div className='news-itemBH'>
-        <MyImage />
+        {template.hasQrCode ? (
+          <div>
+            <MyImage />
+          </div>
+        ) : (
+          <div className='myImageBHNoQrCode'>
+            <MyImage />
+          </div>
+        )}
         <div className='logoBH'>
           <img src={logo} alt='Logo' />
         </div>
