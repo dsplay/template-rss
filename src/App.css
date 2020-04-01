@@ -129,14 +129,14 @@
 @media (orientation: portrait) {
   .news-item .title {
     position: fixed;
-    font-size: 4em;
+    font-size: 2.5em;
     bottom: 18.5%;
     height: 8%;
     left: 25%;
     width: 75%;
     background-color: brown;
     opacity: 1;
-    padding: 1% 3%;
+    padding: 1% 4%;
     -webkit-animation: slideInLeft 1s ease-in;
     animation: slideInLeft 1s ease-in;
     text-align: center;
@@ -246,10 +246,10 @@
 @media (orientation: landscape) {
   .qrcode {
     position: fixed;
-    right: 12.5%;
-    bottom: 5%;
+    right: 12.4%;
+    bottom: 4.6%;
     width: 25%;
-    height: 49%;
+    height: 50%;
     text-align: center;
     padding: 30px;
     -webkit-animation: slideInBottom 1s ease-out;
@@ -257,8 +257,8 @@
   }
 
   .qrcode img {
-    right: -50.6%;
-    bottom: -10.7%;
+    right: -50.8%;
+    bottom: -11%;
     height: 37%;
     width: auto;
     margin: 3px;
@@ -282,9 +282,9 @@
   }
 
   .qrcode img {
-    right: -50%;
+    right: -55%;
     bottom: -10%;
-    height: 37%;
+    height: 36.8%;
     width: auto;
     margin: 3px;
     border-color: white;
@@ -339,45 +339,79 @@
   animation: fadeIn 2s ease-in;
 }
 
-.news-itemBH .logoBH {
-  position: fixed;
-  height: 50%;
-  width: 10.05%;
-  bottom: 18.5%;
-  left: 0;
-  top: 0%;
-  padding-right: 3%;
-  /* right: 150%; */
-  background-color: snow;
-  opacity: 1;
-  -webkit-animation: slideInLeft 1s ease-in;
-  animation: slideInLeft 1s ease-in;
-}
+@media (height: 100px) and (width: 1280px) {
+  .news-itemBH .titleBH {
+    position: fixed;
+    font-size: 20px;
+    top: 50%;
+    height: 50%;
+    width: 10.05%;
+    left: 0%;
+    background-color: brown;
+    opacity: 1;
+    padding: 0.6% 3% 0.4% 3%;
+    -webkit-animation: slideInLeft 1s ease-in;
+    animation: slideInLeft 1s ease-in;
+    display: flex;
+    justify-content: center;
+  }
 
-.news-itemBH .logoBH img {
-  position: relative;
-  height: 60%;
-  width: 50%;
-  top: 15%;
-  display: flex;
-  justify-content: center;
-  object-fit: scale-down;
-}
+  .news-itemBH .logoBH {
+    position: fixed;
+    height: 52%;
+    width: 10.05%;
+    bottom: 18.5%;
+    top: 0%;
+    right: 86%;
+    padding-right: 4.5%;
+    background-color: snow;
+    opacity: 1;
+    -webkit-animation: slideInLeft 1s ease-in;
+    animation: slideInLeft 1s ease-in;
+  }
 
-.news-itemBH .titleBH {
-  position: fixed;
-  font-size: 1.5em;
-  top: 50%;
-  height: 50%;
-  width: 10.05%;
-  left: 0%;
-  background-color: brown;
-  opacity: 1;
-  padding: 0.5% 3% 0.4% 3%;
-  -webkit-animation: slideInLeft 1s ease-in;
-  animation: slideInLeft 1s ease-in;
-  display: flex;
-  justify-content: center;
+  .news-itemBH .logoBH img {
+    position: relative;
+    height: 60%;
+    width: 90%;
+    top: 15%;
+    padding: 0% 5% 0 0;
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+  }
+
+  .myImageBHNoQrCode {
+    position: fixed;
+    top: 0%;
+    height: 100%;
+    bottom: 30%;
+    width: 39%;
+    left: 63.5%;
+  }
+
+  .news-itemBH .logoBH {
+    position: fixed;
+    height: 50%;
+    width: 20.05%;
+    bottom: 18.5%;
+    /* left: 0; */
+    top: 0%;
+    /* padding-right: 4cm; */
+    background-color: snow;
+    opacity: 1;
+    -webkit-animation: slideInLeft 1s ease-in;
+    animation: slideInLeft 1s ease-in;
+  }
+
+  .news-itemBH .logoBH img {
+    position: relative;
+    height: 60%;
+    width: 50%;
+    top: 15%;
+    right: 10px;
+    object-fit: scale-down;
+  }
 }
 
 .news-itemBH .descBH {
@@ -449,6 +483,7 @@
     -webkit-animation: fadeIn 2s ease-in;
     animation: fadeIn 2s ease-in;
   }
+
   .myImageBHNoQrCode {
     position: fixed;
     top: 0%;
@@ -456,16 +491,46 @@
     width: 39%;
     left: 64%;
   }
-}
 
-@media (height: 100px) and (width: 1280px) {
-  .myImageBHNoQrCode {
+  .news-itemBH .titleBH {
     position: fixed;
+    font-size: 20px;
+    top: 50%;
+    height: 50%;
+    width: 10.05%;
+    left: 0%;
+    background-color: brown;
+    opacity: 1;
+    padding: 0.5% 3% 0.4% 3%;
+    -webkit-animation: slideInLeft 1s ease-in;
+    animation: slideInLeft 1s ease-in;
+    display: flex;
+    justify-content: center;
+  }
+
+  .news-itemBH .logoBH {
+    position: fixed;
+    height: 50%;
+    width: 10.05%;
+    bottom: 18.5%;
+    left: 0;
     top: 0%;
-    height: 100%;
-    bottom: 30%;
-    width: 39%;
-    left: 63.5%;
+    padding-right: 3%;
+    /* right: 150%; */
+    background-color: snow;
+    opacity: 1;
+    -webkit-animation: slideInLeft 1s ease-in;
+    animation: slideInLeft 1s ease-in;
+  }
+
+  .news-itemBH .logoBH img {
+    position: relative;
+    height: 60%;
+    width: 50%;
+    top: 15%;
+    display: flex;
+    justify-content: center;
+    object-fit: scale-down;
   }
 }
 
@@ -556,6 +621,42 @@
     object-fit: scale-down;
     padding: 0% 10%;
   }
+}
+
+.titleSQ {
+  position: fixed;
+  font-size: 4em;
+  bottom: 18.5%;
+  height: 8%;
+  left: 25%;
+  width: 75%;
+  background-color: brown;
+  opacity: 1;
+  padding: 1% 3%;
+  -webkit-animation: slideInLeft 1s ease-in;
+  animation: slideInLeft 1s ease-in;
+  text-align: center;
+}
+
+.logoSQ {
+  position: absolute;
+  height: 8%;
+  width: 25%;
+  bottom: 18.5%;
+  left: 0;
+  padding: 2% 0 5%;
+  background-color: snow;
+  opacity: 1;
+  -webkit-animation: slideInLeft 1s ease-in;
+  animation: slideInLeft 1s ease-in;
+}
+
+.logoSQ img {
+  height: 65%;
+  width: 100%;
+  bottom: 20%;
+  object-fit: scale-down;
+  padding: 0% 10%;
 }
 
 @-webkit-keyframes fadeIn {
