@@ -29,5 +29,6 @@ var dsplay_media = {
 };
 
 var dsplay_template = {
-  hasQrCode: 'true'
+  // hasQrCode: 'true',
+  logo: '../test-assets/uol.png'
 };

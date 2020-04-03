@@ -1,0 +1,76 @@
+$snow: snow;
+$opacities: ("total": 1, "partial": 0.8);
+$-webkit-animation: slideInLeft 1s ease-in;
+$animation: slideInLeft 1s ease-in;
+
+@media (orientation: landscape) {
+  .news-item .logo {
+    position: absolute;
+    height: 8%;
+    width: 15%;
+    bottom: 18.5%;
+    left: 0;
+    padding: 1% 0 5%;
+    background-color: $snow;
+    opacity: map-get($opacities, total);
+    -webkit-animation: $-webkit-animation;
+    animation: $animation;
+  }
+}
+
+@media (orientation: portrait) {
+  .news-item .logo {
+    position: absolute;
+    height: 8%;
+    width: 25%;
+    bottom: 18.5%;
+    left: 0;
+    padding: 2% 0 5%;
+    background-color: snow;
+    opacity: map-get($opacities, total);
+    -webkit-animation: slideInLeft 1s ease-in;
+    animation: slideInLeft 1s ease-in;
+  }
+}
+
+@media (orientation: landscape) {
+  .news-item .logo img {
+    height: 65%;
+    width: 100%;
+    object-fit: scale-down;
+  }
+}
+
+@media (orientation: portrait) {
+  .news-item .logo img {
+    height: 65%;
+    width: 100%;
+    object-fit: scale-down;
+    padding: 2% 10%;
+  }
+}
+
+.news-itemBH .logoBH {
+  position: fixed;
+  height: 52%;
+  width: 10.05%;
+  bottom: 18.5%;
+  top: 0%;
+  right: 86%;
+  padding-right: 4.5%;
+  background-color: snow;
+  opacity: 1;
+  -webkit-animation: slideInLeft 1s ease-in;
+  animation: slideInLeft 1s ease-in;
+}
+
+.news-itemBH .logoBH img {
+  position: relative;
+  height: 60%;
+  width: 90%;
+  top: 15%;
+  padding: 0% 5% 0 0;
+  display: flex;
+  justify-content: center;
+  object-fit: cover;
+}
