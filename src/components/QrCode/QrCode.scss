@@ -1,49 +1,39 @@
+$white: white;
+$solid: solid;
+$fixed: fixed;
+$center: center;
+$fivePx: 5px;
+$-webkit-animation: slideInBottom 1s ease-out;
+$animation: slideInBottom 1s ease-out;
+
 @media (orientation: landscape) {
   .news-item .qrCode {
-    position: fixed;
-    right: 12.4%;
-    bottom: 4.6%;
-    width: 25%;
-    height: 50%;
-    text-align: center;
-    padding: 30px;
-    -webkit-animation: slideInBottom 1s ease-out;
-    animation: slideInBottom 1s ease-out;
-  }
-
-  .news-item .qrCode img {
-    right: -40.8%;
-    bottom: -11%;
-    height: 37%;
-    width: auto;
-    margin: 3px;
-    border-color: white;
-    border-style: solid;
-    border-width: 6px;
+    position: $fixed;
+    right: 0%;
+    bottom: -0.1%;
+    width: 10%;
+    height: 18.6%;
+    text-align: $center;
+    -webkit-animation: $-webkit-animation;
+    animation: $animation;
+    border-color: $white;
+    border-style: $solid;
+    border-width: $fivePx;
   }
 }
 
 @media (orientation: portrait) {
   .news-item .qrCode {
-    position: fixed;
-    right: 12.5%;
-    bottom: 5%;
-    width: 25%;
-    height: 49%;
-    text-align: center;
-    padding: 30px;
-    -webkit-animation: slideInBottom 1s ease-out;
-    animation: slideInBottom 1s ease-out;
-  }
-
-  .news-item .qrCode img {
-    right: -55%;
-    bottom: -10%;
-    height: 36.8%;
-    width: auto;
-    margin: 3px;
-    border-color: white;
-    border-style: solid;
-    border-width: 6px;
+    position: $fixed;
+    right: 0%;
+    bottom: 0%;
+    width: 31%;
+    height: 18.5%;
+    text-align: $center;
+    -webkit-animation: $-webkit-animation;
+    animation: $animation;
+    border-color: $white;
+    border-style: $solid;
+    border-width: $fivePx;
   }
 }

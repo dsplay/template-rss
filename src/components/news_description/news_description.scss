@@ -1,77 +1,75 @@
+$posFixed: fixed;
+$zero: 0;
+$center: center;
+$height18: 18.5%;
+$displayFlex: flex;
+$-webkit-animation: slideInBottom 1s ease-out;
+$animation: slideInBottom 1s ease-out;
+$bg: black;
+$opacities: ('total': 1,
+  'partial': 0.8,
+);
+
 @media (orientation: landscape) {
   .news-item .desc {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    bottom: 0;
-    left: 0;
+    position: $posFixed;
+    display: $displayFlex;
+    justify-content: $center;
+    align-items: $center;
+    bottom: $zero;
+    left: $zero;
     width: 92%;
-    height: 18.5%;
-    background-color: blue;
-    opacity: 0.8;
+    height: $height18;
+    background-color: $bg;
+    opacity: map-get($opacities, partial);
     padding: 1% 3%;
-    -webkit-animation: slideInBottom 1s ease-out;
-    animation: slideInBottom 1s ease-out;
+    -webkit-animation: $-webkit-animation;
+    animation: $animation;
   }
 }
 
 @media (orientation: portrait) {
   .news-item .desc {
     position: fixed;
-    bottom: 0;
-    left: 0;
+    bottom: $zero;
+    left: $zero;
     width: 69%;
-    height: 18%;
-    background-color: black;
-    opacity: 1;
+    height: $height18;
+    background-color: $bg;
+    opacity: map-get($opacities, total);
     padding: 1% 3%;
-    -webkit-animation: slideInBottom 1s ease-out;
-    animation: slideInBottom 1s ease-out;
-  }
-}
-
-@media (orientation: portrait) {
-  .descNoQrCode {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 18%;
-    background-color: black;
-    opacity: 0.8;
-    padding: 4% 3%;
-    -webkit-animation: slideInBottom 1s ease-out;
-    animation: slideInBottom 1s ease-out;
+    -webkit-animation: $-webkit-animation;
+    animation: $animation;
   }
 }
 
 @media (orientation: landscape) {
   .descNoQrCode {
     position: fixed;
-    bottom: 0;
-    left: 0;
+    bottom: $zero;
+    left: $zero;
+    font-size: 2em;
     width: 100%;
-    height: 18.5%;
-    background-color: black;
-    opacity: 0.8;
-    padding: 2.4% 3%;
-    -webkit-animation: slideInBottom 1s ease-out;
-    animation: slideInBottom 1s ease-out;
+    height: $height18;
+    background-color: $bg;
+    opacity: map-get($opacities, partial);
+    padding: 3% 3%;
+    -webkit-animation: $-webkit-animation;
+    animation: $animation;
   }
 }
 
-.descNoQrCodeBH {
-  font-size: 30px;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  bottom: 0;
-  left: 10%;
-  width: 70%;
-  height: 100%;
-  background-color: black;
-  opacity: 1;
-  -webkit-animation: slideInBottom 1s ease-out;
-  animation: slideInBottom 1s ease-out;
+@media (orientation: portrait) {
+  .descNoQrCode {
+    position: fixed;
+    bottom: $zero;
+    left: $zero;
+    width: 100%;
+    height: $height18;
+    background-color: $bg;
+    opacity: map-get($opacities, total);
+    padding: 4% 3%;
+    -webkit-animation: $-webkit-animation;
+    animation: $animation;
+  }
 }
