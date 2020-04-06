@@ -1,0 +1,62 @@
+@import ../../styles/mixins
+@import ../../styles/config
+
+.title
+  // background-color: red
+  display: flex
+  position: absolute
+  min-height: 5rem
+  bottom: $hTextHeight
+  z-index: 3
+  @include animation(slideInLeft 1s ease-in)
+  // @include animation(slideInBottom 1s ease-out)
+
+
+  .text
+    // background-color: green
+    position: relative
+    display: inline-flex
+    font-family: 'Oswald', sans-serif
+    justify-content: center
+    align-items: center
+    padding: 0 1em
+    font-size: 3em
+    text-transform: uppercase
+
+    .bg
+      opacity: $opacity
+      position: absolute
+      width: 100%
+      height: 100%
+    .content
+      z-index: 1
+
+.portrait, .squared
+  .title
+    width: 100%
+    min-height: $vMinTitleHeight
+    .text
+      width: 100%
+      .bg
+        opacity: 1
+
+.banner-h
+  .title
+    position: inherit
+    display: inline-flex
+    flex-direction: column
+    height: 100vh
+    min-width: 15em
+    padding: 0
+    .text
+      height: 50vh
+      font-size: 20vh
+
+      .bg
+        opacity: 1
+
+      .content
+        height: 40vh
+        padding: 0
+        display: flex
+        align-items: center

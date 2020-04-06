@@ -1,10 +1,27 @@
 import React from 'react';
-import './image.scss';
-import { media } from '@dsplay/template-utils';
+import './image.sass';
+import { media, tval } from '@dsplay/template-utils';
+import { DEFAULT_TEXT_BG_COLOR } from '../../util/defaults';
 
-const Image = () => {
-  const { imageUrl } = media;
-  return <img src={imageUrl} alt='Imagem' className='image' />;
-};
+const { imageUrl } = media;
+
+const backgroundColor = tval('text_bg_color', DEFAULT_TEXT_BG_COLOR);
+
+const bgStyle = {
+  backgroundColor,
+}
+
+const contentStyle = {
+  backgroundImage: `url(${imageUrl})`,
+}
+
+const Image = () => (
+  <div className='image'>
+    <div className="container">
+      <div className="bg" style={bgStyle} />
+      <div className="content" style={contentStyle} />
+    </div>
+  </div>
+);
 
 export default Image;

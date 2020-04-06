@@ -1,0 +1,35 @@
+@import ../../styles/config
+
+.logo
+  position: relative
+  padding: 1em
+  display: inline-flex
+  align-items: center
+  justify-content: center
+
+  .bg
+    opacity: $opacity
+    position: absolute
+    width: 100%
+    height: 100%
+  .content
+    z-index: 1
+    padding: 0
+    img
+      display: flex
+      height: 4em
+
+.portrait, .squared
+  .logo
+    .bg
+      opacity: 1
+
+.banner-h
+  .logo
+    height: 50vh
+    padding: 0
+    .bg
+      opacity: 1
+    .content
+      img
+        height: 30vh

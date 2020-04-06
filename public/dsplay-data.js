@@ -29,6 +29,10 @@ var dsplay_media = {
 };
 
 var dsplay_template = {
-  // hasQrCode: 'true',
-  logo: '../test-assets/uol.png'
+  show_qr_code: 'true',
+  logo: '../test-assets/uol.png',
+  title_color: 'white',
+  title_bg_color: '#A00',
+  // text_color: 'yellow',
+  // text_bg_color: 'blue',
 };

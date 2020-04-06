@@ -1,0 +1,46 @@
+@import ../../styles/mixins
+@import ../../styles/config
+
+.image
+  position: absolute
+  width: 100%
+  height: 100%
+  @include animation(fadeIn 1s ease-in)
+
+  .container
+    position: relative
+    height: 100%
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    .bg
+      position: absolute
+      width: 100%
+      height: 100%
+      opacity: $opacity
+
+    .content
+      z-index: 2
+      width: 100%
+      height: 100%
+      background-size: cover
+      background-position: center
+
+.landscape
+  .image
+
+.portrait, .squared
+  .image
+    height: calc(100vh - #{$hTextHeight} - #{$vMinTitleHeight})
+.banner-h
+  .image
+    position: inherit
+    left: 20em
+    width: 100vh
+    height: 100vh
+    .bg
+      opacity: 1
+    .content
+      width: calc(90vh)
+      height: calc(90vh)

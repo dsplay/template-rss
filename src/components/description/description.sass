@@ -1,0 +1,47 @@
+@import ../../styles/mixins
+@import ../../styles/config
+
+.description
+  position: absolute
+  display: flex
+  bottom: 0
+  width: 100%
+  height: $hTextHeight
+  opacity: $opacity
+  padding: 0
+  z-index: 2
+  @include animation(slideInBottom 1s ease-out)
+
+  .text
+    // background-color: yellow
+    font-family: 'Roboto Condensed', sans-serif
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    vertical-align: top
+    padding: 1% 2%
+    width: 100%
+    height: 100%
+
+  &.with-qr-code
+    .text
+      width: calc(100% - #{$hTextHeight})
+
+.landscape
+
+.portrait, .squared
+  .description
+    opacity: 1
+    .text
+      padding: 1% 5%
+
+.banner-h
+  .description
+    display: inline-flex
+    position: inherit
+    opacity: 1
+    width: auto
+    height: 100vh
+    flex-grow: 1
+    .text
+      padding: 10vh 1%
