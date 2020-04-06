@@ -1,14 +1,16 @@
 import React from 'react';
-import { media } from '@dsplay/template-utils';
+import { media, tbval } from '@dsplay/template-utils';
 import { Textfit } from 'react-textfit';
 import './news_description.scss';
 
 const NewsDescription = () => {
   const { itemDescription } = media;
+  const showQrCode = tbval('hasQrCode');
+  const description = showQrCode ? 'desc' : 'descNoQrCode';
   return (
-    <div className='description'>
-      <Textfit mode='multi'>{itemDescription}</Textfit>
-    </div>
+    <Textfit mode='multi' className={description}>
+      {itemDescription}
+    </Textfit>
   );
 };
 

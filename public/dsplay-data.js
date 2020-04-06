@@ -6,7 +6,7 @@ var dsplay_config = {
   // Android SDK version
   osVersion: 16,
   // DSPLAY App version code
-  appVersion: 99
+  appVersion: 99,
 };
 
 var dsplay_media = {
@@ -25,10 +25,10 @@ var dsplay_media = {
   imageTitle: 'Image Title', // Title of RSS item image (if available)
   source: 'CNN', // An internal control field indicating the source of RSS.
   // You define the value of source when create a RSS Channel.
-  title: 'Últimas notícias' // The media title
+  title: 'Últimas notícias', // The media title
 };
 
 var dsplay_template = {
-  // hasQrCode: 'true',
-  logo: '../test-assets/uol.png'
+  hasQrCode: 'false',
+  logo: '../test-assets/uol.png',
 };
