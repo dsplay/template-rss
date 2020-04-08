@@ -1,12 +1,12 @@
 import React from 'react';
-import { template, tval } from '@dsplay/template-utils';
+import { tval } from '@dsplay/template-utils';
 import { DEFAULT_LOGO_BG_COLOR } from '../../util/defaults';
+import rssLogo from '../../images/rss-flat.png';
 import './logo.sass';
-
-const { logo } = template;
 
 // template properties
 const backgroundColor = tval('logo_bg_color', DEFAULT_LOGO_BG_COLOR);
+const logo = tval('logo', rssLogo);
 
 // component properties
 const style = {

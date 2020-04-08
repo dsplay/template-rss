@@ -5,7 +5,7 @@ import './title.sass';
 import { DEFAULT_TITLE_COLOR, DEFAULT_TITLE_BG_COLOR } from '../../util/defaults';
 
 // media properties
-const { itemTitle } = media;
+const { source, itemTitle, title: mediaTitle } = media;
 
 // template properties
 const color = tval('title_color', DEFAULT_TITLE_COLOR);
@@ -20,13 +20,15 @@ const bgStyle = {
   backgroundColor,
 }
 
+const title = source !== 'UOLIndoor' ? mediaTitle : itemTitle;
+
 // component
 const Title = () => (
   <div className='title' style={style}>
     <Logo />
-    <div className="text">
+    <div className="text">{ console.log(title)}
       <div className="bg" style={bgStyle} />
-      <div className="content">{itemTitle}</div>
+      <div className="content">{title}</div>
     </div>
   </div>
 );

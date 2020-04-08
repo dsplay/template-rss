@@ -6,12 +6,19 @@ import './qr-code.sass';
 const { qrCode } = media;
 
 // component
-const QrCode = () => (
-  <img
-    src={qrCode}
-    alt=''
-    className='qr-code'
-  />
-);
+const QrCode = () => {
+
+  if (!qrCode) {
+    return null;
+  }
+
+  return (
+    <img
+      src={qrCode}
+      alt=''
+      className='qr-code'
+    />
+  );
+}
 
 export default QrCode;

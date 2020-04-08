@@ -4,15 +4,18 @@
   "private": true,
   "dependencies": {
     "@dsplay/template-utils": "^1.1.8",
+    "@kennethormandy/react-fittext": "^0.6.0",
     "bootstrap": "^4.4.1",
     "core-js": "^3.6.4",
+    "fitty": "^2.3.0",
     "node-sass": "^4.13.1",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.17",
     "react-dom": "^16.12.0",
     "react-scripts": "^3.4.0",
     "react-textfit": "^1.1.0",
-    "sass": "^1.26.3"
+    "sass": "^1.26.3",
+    "use-fit-text": "^2.1.2"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -19,19 +19,27 @@ var dsplay_media = {
   hasImage: true,
   qrCode: '../test-assets/qrcode.png',
   itemContent: 'Conteúdo da notícia',
-  itemDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', // RSS item description
+  itemDescription: 'Lorem ipsum dolor sit amet, &#36; consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', // RSS item description
   itemContent: 'Content', // RSS item content
-  itemTitle: 'Celebridades', // RSS item title
+  itemTitle: 'Lorem ipsum dolor sit amet, &#36; consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', // RSS item title
   imageTitle: 'Image Title', // Title of RSS item image (if available)
-  source: 'CNN', // An internal control field indicating the source of RSS.
+  source: 'UOLIndoors', // An internal control field indicating the source of RSS.
   // You define the value of source when create a RSS Channel.
-  title: 'Últimas notícias' // The media title
+  // title: 'Breaking News', // The media title
+  title: 'Últimas Notícias', // The media title
+
+  // UOL
+  // itemContent: 'Conteúdo da notícia',
+  // itemDescription: 'Lorem ipsum dolor sit amet, &#36; consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', // RSS item description
+  // itemTitle: 'Celebridades', // RSS item title
 };
 
 var dsplay_template = {
   show_qr_code: 'true',
+  // bg_color: 'yellow',
   logo: '../test-assets/uol.png',
-  title_color: 'white',
+  // logo_bg_color: 'pink',
+  // title_color: 'green',
   title_bg_color: '#A00',
   // text_color: 'yellow',
   // text_bg_color: 'blue',
