@@ -1,6 +1,7 @@
 @import ../../styles/config
 
 .logo
+  // background-color: orange
   position: relative
   padding: 1vh
   display: flex
@@ -9,27 +10,42 @@
 
   .bg
     opacity: $opacity
-    position: absolute
+    z-index: 0
+  .content
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
     width: 100%
     height: 100%
-  .content
     z-index: 1
-    padding: 0
-    img
-      display: flex
-      height: 4em
+
+.landscape
+  .logo
+    width: $landscapeTitleHeight
+    height: $landscapeTitleHeight
+    .content
+      height: $landscapeTitleHeight - 2vh
+      width: $landscapeTitleHeight -2vh
 
 .portrait, .squared
   .logo
+    width: $portraitTitleHeight
+    height: $portraitTitleHeight
+    padding: 1vw
     .bg
       opacity: 1
+    .content
+      height: $portraitTitleHeight - 2vh
+      width: $portraitTitleHeight - 2vh
 
 .banner-h
   .logo
-    height: 50vh
+    height: 50%
+    width: 100%
     padding: 0
     .bg
       opacity: 1
     .content
-      img
-        height: 30vh
+      background-color: pink
+      width: $hBanerLogoDimension
+      height: $hBanerLogoDimension

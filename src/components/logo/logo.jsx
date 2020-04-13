@@ -9,15 +9,19 @@ const backgroundColor = tval('logo_bg_color', DEFAULT_LOGO_BG_COLOR);
 const logo = tval('logo', rssLogo);
 
 // component properties
-const style = {
+const bgStyle = {
   backgroundColor,
+}
+
+const contentStyle = {
+  backgroundImage: `url(${logo})`,
 }
 
 // component
 const Logo = () => (
   <div className='logo'>
-    <div className="bg" style={style} />
-    <div className="content"><img src={logo} alt='' /></div>
+    <div className="bg wrapped" style={bgStyle} />
+    <div className="content" style={contentStyle} >&nbsp;</div>
   </div>
 );
 

@@ -1,8 +1,9 @@
 import React from 'react';
 import { media, tval } from '@dsplay/template-utils';
 import Logo from '../logo/logo';
-import './title.sass';
 import { DEFAULT_TITLE_COLOR, DEFAULT_TITLE_BG_COLOR } from '../../util/defaults';
+import FitText from '../fit-text/fit-text';
+import './title.sass';
 
 // media properties
 const { source, itemTitle, title: mediaTitle } = media;
@@ -27,8 +28,10 @@ const Title = () => (
   <div className='title' style={style}>
     <Logo />
     <div className="text">{ console.log(title)}
-      <div className="bg" style={bgStyle} />
-      <div className="content">{title}</div>
+      <div className="bg wrapped" style={bgStyle} />
+      <div className="content">
+        <FitText>{title}</FitText>
+      </div>
     </div>
   </div>
 );

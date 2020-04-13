@@ -6,7 +6,6 @@
   display: flex
   bottom: 0
   width: 100%
-  height: $hTextHeight
   z-index: 2
   @include animation(slideInBottom 1s ease-out)
 
@@ -33,27 +32,36 @@
       width: 100%
       height: 100%
 
-  &.with-qr-code
+.landscape
+  .description
+    height: $landscapeDescHeight
+    &.with-qr-code
     .content
       .text
-        width: calc(100% - #{$hTextHeight})
+        width: calc(100% - #{$landscapeDescHeight})
 
-.landscape
 
 .portrait, .squared
   .description
+    @include animation(slideIn 1s ease-out)
+    height: $portraitDescHeight
     .bg
       opacity: 1
     .content
       .text
         padding: 2% 5%
+    &.with-qr-code
+      .content
+        .text
+          width: calc(100% - #{$portraitDescHeight})
+  
 
 .banner-h
   .description
-    display: inline-flex
-    position: inherit
+    @include animation(slideIn 1s ease-out)
+    right: 0
+    display: flex
     height: 100vh
-    width: unset
     flex-grow: 1
     .bg
       opacity: 1

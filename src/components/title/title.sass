@@ -5,8 +5,6 @@
   // background-color: red
   display: flex
   position: absolute
-  min-height: 10vh
-  bottom: $hTextHeight
   left: 0
   z-index: 3
   @include animation(slideInLeft 1s ease-in)
@@ -18,46 +16,53 @@
     font-family: 'Oswald'
     justify-content: center
     align-items: center
-    padding: 0 1em
-    font-size: 2.5em
+    padding: 0 2vh
     text-transform: uppercase
+    height: 100%
+    width: 100%
 
     .bg
       opacity: $opacity
       position: absolute
       width: 100%
       height: 100%
+      left: 0
+      top: 0
     .content
       z-index: 1
-
+      height: 100%
+      width: 100%
+.landscape
+  .title
+    width: $landscapeTitleWidth
+    height: $landscapeTitleHeight
+    bottom: $landscapeTitleBottom
+    .text
+      width: $landscapeTitleWidth - $landscapeTitleHeight
+      .content
+        
 .portrait, .squared
   .title
     width: 100%
-    min-height: $vMinTitleHeight
-    // min-height: auto 
+    height: $portraitTitleHeight
+    bottom: $portraitTitleBottom
     .text
-      width: 100%
+      padding: 1vh 2vh
       .bg
         opacity: 1
 
 .banner-h
   .title
-    position: static
-    display: inline-flex
     flex-direction: column
     height: 100vh
-    min-width: 11em
-    padding: 0
-    flex-shrink: 0
+    width: $hBannerTitleWidth
+    left: 0
+    top: 0
     .text
-      height: 50vh
-      font-size: 15vh
-
+      height: 50%
+      padding: 1vh 15vh
       .bg
         opacity: 1
 
       .content
-        height: 40vh
-        padding: 0
-        display: inline-flex
-        align-items: center
+        height: 100%

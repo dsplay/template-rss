@@ -32,7 +32,7 @@ const Image = () => {
       <div className="container">
         <div className="bg" style={bgStyle} />
         <div className="wrapper">
-          <div className="content" style={contentStyle} />
+          <div className="content" style={contentStyle} >&nbsp;</div>
         </div>
       </div>
     </div>
