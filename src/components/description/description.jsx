@@ -3,7 +3,7 @@ import { media, tval, tbval } from '@dsplay/template-utils';
 import QrCode from '../qr-code/qr-code';
 import { DEFAULT_TEXT_BG_COLOR, DEFAULT_TEXT_COLOR } from '../../util/defaults';
 import FitText from '../fit-text/fit-text';
-import { getWidth, getHeight, screenFormat, LANDSCAPE, PORTRAIT, SQUARED, BANNER_H, BANNER_V } from '../../util/screen';
+import { getWidth, getHeight, screenFormat, BANNER_H } from '../../util/screen';
 
 import './description.sass';
 
@@ -28,15 +28,11 @@ let left;
 const imageWidth = hasImage ? h : 0;
 
 switch (screenFormat) {
-  case LANDSCAPE:
-    break;
-  case PORTRAIT:
-    break;
-  case SQUARED:
-    break;
   case BANNER_H:
     left = h * 2 + imageWidth;
     descWidth = w - left;
+    break;
+  default:
     break;
 }
 

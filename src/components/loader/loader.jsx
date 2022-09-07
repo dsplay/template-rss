@@ -1,7 +1,7 @@
 import React from 'react';
 import './loader.sass';
 import spinner from '../../images/loader.gif';
-import { getWidth, getHeight, screenFormat, LANDSCAPE, PORTRAIT, SQUARED, BANNER_H, BANNER_V } from '../../util/screen';
+import { getWidth, getHeight, screenFormat, BANNER_H, BANNER_V } from '../../util/screen';
 
 // component
 
@@ -11,15 +11,11 @@ const h = getHeight();
 let spinnerDimension = Math.min(w, h) / 8;
 
 switch (screenFormat) {
-  case LANDSCAPE:
-    break;
-  case PORTRAIT:
-    break;
-  case SQUARED:
-    break;
   case BANNER_H:
   case BANNER_V:
     spinnerDimension = Math.min(w, h) / 2;
+    break;
+  default:
     break;
 }
 
