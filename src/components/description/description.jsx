@@ -25,7 +25,7 @@ const Description = () => {
   const { itemDescription, itemTitle, source, qrCode, hasImage } = useMedia();
 
   // template properties
-  const showQrCode = useTemplateBoolVal('show_qr_code');
+  const showQrCode = useTemplateBoolVal('show_qr_code', true);
   const color = useTemplateVal('text_color', DEFAULT_TEXT_COLOR);
   const backgroundColor = useTemplateVal('text_bg_color', DEFAULT_TEXT_BG_COLOR);
 
