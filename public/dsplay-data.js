@@ -16,8 +16,9 @@ var dsplay_media = {
   iteration: 4,
   duration: 15000,
   imageUrl: '../test-assets/Nighthawksreference.png',
-  hasImage: true,
-  qrCode: '../test-assets/qrcode.png',
+  // hasImage: true,
+  // qrCode: '../test-assets/qrcode.png',
+  link: 'https://dsplay.tv',
   imageTitle: 'Image Title', // Title of RSS item image (if available)
   title: 'Breaking News', // The media title
   // title: 'Últimas Notícias', // The media title

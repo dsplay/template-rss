@@ -1,29 +1,34 @@
 import React from 'react';
 import './image.sass';
-import { media, tval } from '@dsplay/template-utils';
-import defaultImage from '../../images/bg2.jpg';
+import {
+  useMedia,
+  useTemplateVal,
+  useScreenInfo,
+  screen,
+} from '@dsplay/react-template-utils';
+import defaultImage from '../../images/bg.jpg';
 import { DEFAULT_TEXT_BG_COLOR } from '../../util/defaults';
-import { screenFormat, BANNER_H, BANNER_V } from '../../util/screen';
-
-// media properties
-const { hasImage, imageUrl } = media;
-
-// template properties
-const backgroundColor = tval('text_bg_color', DEFAULT_TEXT_BG_COLOR);
-
-// component properties
-const bgStyle = {
-  backgroundColor,
-}
-
-const contentStyle = {
-  backgroundImage: `url(${hasImage ? imageUrl : defaultImage})`,
-}
 
 // component
 const Image = () => {
+  // media properties
+  const { hasImage, imageUrl } = useMedia();
 
-  if (!hasImage && (screenFormat === BANNER_H || screenFormat === BANNER_V)) {
+  // template properties
+  const backgroundColor = useTemplateVal('text_bg_color', DEFAULT_TEXT_BG_COLOR);
+
+  // component properties
+  const bgStyle = {
+    backgroundColor,
+  };
+
+  const contentStyle = {
+    backgroundImage: `url(${hasImage ? imageUrl : defaultImage})`,
+  };
+
+  const { screenFormat } = useScreenInfo();
+
+  if (!hasImage && (screenFormat === screen.H_BANNER || screenFormat === screen.V_BANNER)) {
     return null;
   }
 

@@ -1,22 +1,24 @@
 import React from 'react';
-import { media } from '@dsplay/template-utils';
+import { useMedia, QrCode as QR } from '@dsplay/react-template-utils';
 import './qr-code.sass';
-
-// media properties
-const { qrCode } = media;
 
 // component
 const QrCode = () => {
+  const media = useMedia();
 
-  if (!qrCode) {
+  // media properties
+  const { link } = media;
+
+  if (!link) {
     return null;
   }
 
   return (
-    <img
-      src={qrCode}
-      alt=''
+    <QR
       className='qr-code'
+      options={{
+        text: link,
+      }}
     />
   );
 }
