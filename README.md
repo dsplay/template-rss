@@ -13,13 +13,13 @@ This is a HTML-based template for [DSPLAY](https://dsplay.tv).
 This works for the following screen formats in any resolution:
 
 - Landscape
-  ![Landscape](docs/screenshots/landscape.png)
+  - ![Landscape](docs/screenshots/landscape.png)
 - Portrait
-  ![Portrait](docs/screenshots/portrait.png)
+  - ![Portrait](docs/screenshots/portrait.png)
 - Square
-  ![Square](docs/screenshots/square.png)
+  - ![Square](docs/screenshots/square.png)
 - Horizontal Banner
-  ![H-Banner](docs/screenshots/h-banner.png)
+  - ![H-Banner](docs/screenshots/h-banner.png)
 
 ### Configuration
 
