@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   useTemplateVal,
+  useTemplateBoolVal,
   useScreenInfo,
   Loader,
 } from '@dsplay/react-template-utils';
@@ -8,6 +9,7 @@ import {
 import NewsItem from './components/news-item/news-item';
 import { DEFAULT_BG_COLOR } from './util/defaults';
 import Intro from './components/intro';
+import Debugger from './components/debugger';
 import './App.sass';
 
 const fonts = [
@@ -21,6 +23,7 @@ const App = () => {
 
   // template properties
   const backgroundColor = useTemplateVal('bg_color', DEFAULT_BG_COLOR);
+  const debug = useTemplateBoolVal('debug');
 
   // component properties
   const style = {
@@ -34,6 +37,7 @@ const App = () => {
     >
       <div className={`App ${screenFormat}`} style={style}>
         <NewsItem />
+        {debug && <Debugger />}
       </div>
     </Loader>
   );
