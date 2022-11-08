@@ -12,12 +12,14 @@ const QrCode = () => {
   const padding = screenFormat === screen.H_BANNER ? 16 : 4;
 
   useEffect(() => {
-    const r = ref.current.getBoundingClientRect();
-    console.log(r.width);
-    console.log(r.height);
-    console.log(h);
-    console.log(padding);
-    setRect(r);
+    if (ref.current) {
+      const r = ref.current.getBoundingClientRect();
+      console.log(r.width);
+      console.log(r.height);
+      console.log(h);
+      console.log(padding);
+      setRect(r);
+    }
   }, [h, padding]);
 
   // media properties
