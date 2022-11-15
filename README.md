@@ -8,7 +8,7 @@ This is a HTML-based template for [DSPLAY](https://dsplay.tv).
 
 > This project was bootstrapped with [DSPLAY - React Template Boilerplate](https://github.com/dsplay/template-boilerplate-react).
 
-## Support Screen Formats/Resolutions
+## Supported Screen Formats/Resolutions
 
 This works for the following screen formats in any resolution:
 
