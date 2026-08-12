@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   useMedia,
   useTemplateVal,
@@ -7,10 +6,10 @@ import {
   screen,
   FitText,
 } from '@dsplay/react-template-utils';
-import QrCode from '../qr-code/qr-code';
+import QrCode from '../qr-code';
 import { DEFAULT_TEXT_BG_COLOR, DEFAULT_TEXT_COLOR } from '../../util/defaults';
 
-import './description.sass';
+import './style.sass';
 
 function decodeHTMLEntities(text) {
   var textArea = document.createElement('textarea');
@@ -18,9 +17,7 @@ function decodeHTMLEntities(text) {
   return textArea.value;
 }
 
-// component
-const Description = () => {
-
+function Description() {
   // media properties
   const { itemDescription, itemTitle, source, qrCode, hasImage } = useMedia();
 
@@ -74,6 +71,6 @@ const Description = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Description;

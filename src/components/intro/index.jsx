@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   useScreenInfo,
   screen,
@@ -7,8 +6,7 @@ import {
 import spinner from '../../images/loader.gif';
 import './style.sass';
 
-// component
-const Loader = (props) => {
+function Intro(props) {
   const { w, h, screenFormat } = useScreenInfo();
 
   let spinnerDimension = Math.min(w, h) / 8;
@@ -36,6 +34,6 @@ const Loader = (props) => {
       <div className="hidden" style={{ fontFamily: 'Roboto Condensed' }} >Loading</div>
     </div>
   );
-};
+}
 
-export default Loader;
+export default Intro;

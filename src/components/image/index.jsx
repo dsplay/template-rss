@@ -1,5 +1,4 @@
-import React from 'react';
-import './image.sass';
+import './style.sass';
 import {
   useMedia,
   useTemplateVal,
@@ -9,8 +8,7 @@ import {
 import defaultImage from '../../images/bg.jpg';
 import { DEFAULT_TEXT_BG_COLOR } from '../../util/defaults';
 
-// component
-const Image = () => {
+function Image() {
   // media properties
   const { hasImage, imageUrl } = useMedia();
 
@@ -33,15 +31,15 @@ const Image = () => {
   }
 
   return (
-    <div className='image'>
+    <div className="image">
       <div className="container">
         <div className="bg" style={bgStyle} />
         <div className="wrapper">
-          <div className="content" style={contentStyle} >&nbsp;</div>
+          <div className="content" style={contentStyle}>&nbsp;</div>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default Image;
