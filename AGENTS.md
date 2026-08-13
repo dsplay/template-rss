@@ -45,6 +45,7 @@ build.sh                    <-- zips the Vite build output into template.zip
 - `public/dsplay-data.js` defines `dsplay_config`/`dsplay_media`/`dsplay_template` mock globals used only in **development**. `build.sh` blanks its content in the production build — the DSPLAY Android app injects the real `window.DSPLAY.getData()` before any script runs.
 - This is a JSON-service-backed media type — most of what's on screen comes from `media.*` (see README's "Expected media data" section), not from Template Vars. Template Vars here only control styling (colors) and the `show_qr_code`/`debug` toggles.
 - `@dsplay/react-template-utils` exposes `useTemplateVal`/`useTemplateBoolVal`/`useMedia`/`useScreenInfo`/`Loader`/`FitText`/`QrCode` (used throughout `src/components/`).
+- **Always read template data through `@dsplay/react-template-utils`'s hooks (`useTemplateVal`/`useTemplateBoolVal`/`useTemplateIntVal`/`useTemplateFloatVal`/`useTemplate()`/`useMedia()`/`useConfig()`), called inside the function component that uses the value — never call `@dsplay/template-utils`'s vanilla `tval`/`tbval`/`tival`/`tfval`/`config`/`media`/`template` directly, and never read them at module scope as a one-time constant. `@dsplay/template-utils` should not appear as a direct dependency in this template's `package.json` (it's still pulled in transitively via `@dsplay/react-template-utils`).
 
 ## Template variable manifest
 
