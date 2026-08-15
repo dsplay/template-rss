@@ -44,13 +44,13 @@ var dsplay_media = {
 
 var dsplay_template = {
   show_qr_code: 'true',
-  // bg_color: 'yellow',
+  bg_color: 'black',
   logo: 'https://developers.dsplay.tv/assets/images/dsplay-logo.png',
-  // logo_bg_color: 'red',
-  // title_color: 'green',
-  // title_bg_color: '#A00',
-  // text_color: 'yellow',
-  // text_bg_color: 'blue',
+  logo_bg_color: 'white',
+  title_color: 'white',
+  title_bg_color: 'darkorange',
+  text_color: 'white',
+  text_bg_color: 'black',
   long_value: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.',
   debug: false,
 };
