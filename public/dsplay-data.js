@@ -19,9 +19,9 @@ var dsplay_media = {
   count: 1,
   iteration: 4,
   duration: 15000,
-  imageUrl: '../test-assets/Nighthawksreference.png',
+  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/7/7b/Hopper_Nighthawks.jpg',
   // hasImage: true,
-  // qrCode: '../test-assets/qrcode.png',
+  qrCode: 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://dsplay.tv',
   link: 'https://dsplay.tv',
   imageTitle: 'Image Title', // Title of RSS item image (if available)
   title: 'Breaking News', // The media title
@@ -45,7 +45,7 @@ var dsplay_media = {
 var dsplay_template = {
   show_qr_code: 'true',
   // bg_color: 'yellow',
-  // logo: '../test-assets/uol.png',
+  logo: 'https://developers.dsplay.tv/assets/images/dsplay-logo.png',
   // logo_bg_color: 'red',
   // title_color: 'green',
   // title_bg_color: '#A00',
