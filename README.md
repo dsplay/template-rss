@@ -34,8 +34,9 @@ A [React](https://reactjs.org/) [HTML-based template](https://developers.dsplay.
 
 Unlike a generic custom template, each item shown here is populated by DSPLAY from a JSON-service-backed feed, not typed in through Template Vars. `src/util/defaults.js` and the components under `src/components/` read the following `media` fields (see `useMedia()` call sites):
 
-- `source` — an internal marker for which feed produced this item (e.g. `'UOLIndoor'`). It flips which field is treated as the main text: for `UOLIndoor` sources the title comes from `itemDescription` and the description from `itemTitle`; for every other source it's the reverse (`title`/`itemTitle`).
-- `title`, `itemTitle`, `itemDescription`, `itemContent` — text fields, see the `source`-dependent swap above.
+- `source` — an internal marker for which feed produced this item (e.g. `'UOLIndoor'`). Everything keyed on it lives in `src/util/uol.js`. UOL's midiaindoor XML is not standard RSS: `<item><title>` holds the category and `<item><description>` holds the headline. An Android player below `LEGACY_UOL_MAX_APP_VERSION` passes that layout through untouched, so for those payloads this template reads the title band from `itemTitle` and the body from `itemDescription`. Everything else — the CMS preview, and Android from that version on — gets the feed pre-normalised by the DSPLAY rss-gateway and uses the ordinary `title`/`itemTitle` pair.
+- `title`, `itemTitle`, `itemDescription`, `itemContent` — text fields, see the `source`-dependent swap above. Normally `title` is the feed's own name (shown in the title band) and `itemTitle` is the headline (shown as the body text).
+- `categories` — the item's categories. Only read for UOL: its six channels all report the same bare `UOL ` as the feed name, so `src/util/uol.js`'s `useFeedLabel()` appends the first category to it (`UOL > Futebol`). Other feeds already carry their section in `title` (G1's is `g1 > Mundo`) and are left alone.
 - `hasImage`, `imageUrl` — when `hasImage` is falsy, `src/components/image` falls back to a bundled placeholder image (and hides entirely on banner screen formats).
 - `link` — the item's URL. `src/components/qr-code` only renders when this is set.
 - `qrCode` — when falsy, hides the QR code regardless of `show_qr_code`.

@@ -5,8 +5,12 @@ var dsplay_config = {
     window.innerHeight < window.innerWidth ? 'landscape' : 'portrait',
   // Android SDK version
   osVersion: 16,
+  // Keep this off 'android': the CMS captures this file into template-example-data.json and layers
+  // it over its own preview config, so claiming to be an Android player here would make the CMS
+  // preview take the legacy-UOL branch in src/util/uol.js.
+  os: 'web-preview',
   // DSPLAY App version code
-  appVersion: 99,
+  appVersion: 40001,
   json: {
     a: 1,
     b: 2,
@@ -35,7 +39,9 @@ var dsplay_media = {
   source: 'UOLIndoors', // An internal control field indicating the source of RSS.
 
 
-  // UOL
+  // UOL, as an Android player below LEGACY_UOL_MAX_APP_VERSION still sends it: the category in
+  // itemTitle, the headline in itemDescription. Also set os: 'android' and a pre-4.0.0 appVersion
+  // in dsplay_config above to exercise that branch.
   // itemContent: 'Conteúdo da notícia',
   // itemDescription: 'Lorem ipsum dolor sit amet, &#36; consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', // RSS item description
   // itemTitle: 'Celebridades', // RSS item title

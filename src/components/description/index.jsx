@@ -8,6 +8,7 @@ import {
 } from '@dsplay/react-template-utils';
 import QrCode from '../qr-code';
 import { DEFAULT_TEXT_BG_COLOR, DEFAULT_TEXT_COLOR } from '../../util/defaults';
+import { useLegacyUolFields } from '../../util/uol';
 
 import './style.sass';
 
@@ -19,7 +20,8 @@ function decodeHTMLEntities(text) {
 
 function Description() {
   // media properties
-  const { itemDescription, itemTitle, source, qrCode, hasImage } = useMedia();
+  const { itemDescription, itemTitle, qrCode, hasImage } = useMedia();
+  const legacyUolFields = useLegacyUolFields();
 
   // template properties
   const showQrCode = useTemplateBoolVal('show_qr_code', true);
@@ -29,7 +31,8 @@ function Description() {
   // component properties
   const extraClass = (showQrCode && qrCode) ? 'with-qr-code' : '';
 
-  const text = source !== 'UOLIndoor' ? itemTitle : itemDescription;
+  // On a legacy UOL payload the headline sits in `itemDescription`, not `itemTitle`.
+  const text = legacyUolFields ? itemDescription : itemTitle;
 
   const { w, h, screenFormat } = useScreenInfo();
 
