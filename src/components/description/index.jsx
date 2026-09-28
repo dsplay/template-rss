@@ -1,5 +1,6 @@
 import {
   useMedia,
+  useConfig,
   useTemplateVal,
   useTemplateBoolVal,
   useScreenInfo,
@@ -8,6 +9,7 @@ import {
 } from '@dsplay/react-template-utils';
 import QrCode from '../qr-code';
 import { DEFAULT_TEXT_BG_COLOR, DEFAULT_TEXT_COLOR } from '../../util/defaults';
+import needsUolIndoorFix from '../../util/uol-indoor';
 
 import './style.sass';
 
@@ -20,6 +22,7 @@ function decodeHTMLEntities(text) {
 function Description() {
   // media properties
   const { itemDescription, itemTitle, source, qrCode, hasImage } = useMedia();
+  const { appVersion } = useConfig();
 
   // template properties
   const showQrCode = useTemplateBoolVal('show_qr_code', true);
@@ -29,7 +32,7 @@ function Description() {
   // component properties
   const extraClass = (showQrCode && qrCode) ? 'with-qr-code' : '';
 
-  const text = source !== 'UOLIndoor' ? itemTitle : itemDescription;
+  const text = needsUolIndoorFix(source, appVersion) ? itemDescription : itemTitle;
 
   const { w, h, screenFormat } = useScreenInfo();
 

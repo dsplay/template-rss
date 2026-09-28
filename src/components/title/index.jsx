@@ -1,12 +1,14 @@
-import { useMedia, useTemplateVal } from '@dsplay/react-template-utils';
+import { useMedia, useConfig, useTemplateVal } from '@dsplay/react-template-utils';
 import Logo from '../logo';
 import { DEFAULT_TITLE_COLOR, DEFAULT_TITLE_BG_COLOR } from '../../util/defaults';
 import FitText from '../fit-text';
+import needsUolIndoorFix from '../../util/uol-indoor';
 import './style.sass';
 
 function Title() {
   // media properties
   const { source, itemTitle, title: mediaTitle } = useMedia();
+  const { appVersion } = useConfig();
 
   // template properties
   const color = useTemplateVal('title_color', DEFAULT_TITLE_COLOR);
@@ -21,7 +23,7 @@ function Title() {
     backgroundColor,
   };
 
-  const title = source !== 'UOLIndoor' ? mediaTitle : itemTitle;
+  const title = needsUolIndoorFix(source, appVersion) ? itemTitle : mediaTitle;
 
   return (
     <div className="title" style={style}>
