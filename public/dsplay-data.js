@@ -6,7 +6,7 @@ var dsplay_config = {
   // Android SDK version
   osVersion: 16,
   // DSPLAY App version code
-  appVersion: 99,
+  appVersion: 40100,
   json: {
     a: 1,
     b: 2,
@@ -32,7 +32,7 @@ var dsplay_media = {
   // itemTitle: 'Lorem ipsum dolor sit amet, &#36; consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', // RSS item title
   itemTitle: '\'Se morre sua mãe, é 100%. Perda é absoluta\'. Diz médica paliativista sobre ameaça do corona', // RSS item title
   // itemTitle: 'Jogo criano na UFPU, em Uberada é registrado no INPI como programa de computador', // RSS item title
-  source: 'UOLIndoors', // An internal control field indicating the source of RSS.
+  source: 'UOLIndoor', // An internal control field indicating the source of RSS.
 
 
   // UOL
